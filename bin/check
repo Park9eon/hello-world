@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+for i in {1..100}; do
+  ms=$(curl http://localhost:8080 -so /dev/null -w "%{time_starttransfer}")
+
+  echo $ms
+done
+
